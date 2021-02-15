@@ -11,3 +11,4 @@ class HotelPage extends React.Component {
 }
 
 export default HotelPage;
+

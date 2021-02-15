@@ -6,6 +6,11 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import NavBar from "./components/NavBar"
+import Home from "./view/Home"
+import Hotel from "./view/Hotel"
+import HotelPage from "./view/HotelPage"
+import Error404 from "./view/Error404"
 
 export default class App extends React.Component{
   constructor(props){
@@ -18,14 +23,14 @@ export default class App extends React.Component{
   render(){
     return(
       <Router>
-        <h2>APP.JS</h2>
+        <NavBar></NavBar>
         <Switch>
           <Route exact path="/" component={Home}/>
-          <Route path="/Home" component={Home}/>
-          <Route path="/hotels" component={Hotels}/>
-          <Route path="/hotels/:city" component={Hotels}/>
-          <Route path="/hotels" component={HotelPage}/>
-          <Route path="/hotels/:id" component={HotelPage}/>
+          <Route path="/home" component={Home}/>
+          <Route path="/hotel" component={Hotel}/>
+          <Route path="/hotel/:city" component={Hotel}/>
+          <Route path="/hotelPage" component={HotelPage}/>
+          <Route path="/hotelPage/:id" component={HotelPage}/>
           <Route path="*" component={Error404}/>
         </Switch>
       </Router>

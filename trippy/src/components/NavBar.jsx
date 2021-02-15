@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 class NavBar extends React.Component {
   render() {
@@ -23,24 +24,19 @@ class NavBar extends React.Component {
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="#">
-                CityCard <span class="sr-only">(current)</span>
-                </a>
+                <Link class="nav-link" to="/home">
+                Home <span class="sr-only">(current)</span>
+                </Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                HotelCard
-                </a>
+                <Link class="nav-link" to="/hotel">
+                Hotel
+                </Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                HotelMap
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#">
-                HotelMarker
-                </a>
+                <Link class="nav-link" to="/hotelPage">
+                HotelPage
+                </Link>
               </li>
             </ul>
           </div>
