@@ -11,6 +11,8 @@ import Home from "./view/Home"
 import Hotel from "./view/Hotel"
 import HotelPage from "./view/HotelPage"
 import Error404 from "./view/Error404"
+import Api from './utils/Api'
+import Config from '../src/utils/Api'
 
 export default class App extends React.Component{
   constructor(props){
@@ -21,6 +23,7 @@ export default class App extends React.Component{
   }
 
   render(){
+    console.log(Config)
     return(
       <Router>
         <NavBar></NavBar>
