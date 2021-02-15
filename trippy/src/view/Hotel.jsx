@@ -10,4 +10,4 @@ class Hotel extends React.Component {
   }
 }
 
-export default Hhotel;
+export default Hotel;
