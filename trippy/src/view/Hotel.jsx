@@ -13,15 +13,16 @@ class Hotel extends React.Component {
       center: [],
       prix: 0,
       zoom: 0,
+      city: props.match.params.city
     };
   }
 
   componentDidMount = () => {
-    this.getCity("paris");
+    this.getCity();
   };
 
-  getCity = (city) => {
-    fetch(`http://localhost:3002/api/hotels/city/${city}`)
+  getCity = () => {
+    fetch(`http://localhost:3002/api/hotels/city/${this.state.city}`)
       .then((response) => response.json())
       .then((result) => {
         console.log(result);
@@ -29,6 +30,7 @@ class Hotel extends React.Component {
           hotels: result.results,
           center: result.center,
         });
+        console.log(result)
       });
   };
 

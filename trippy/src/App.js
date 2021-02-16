@@ -29,9 +29,7 @@ export default class App extends React.Component{
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route path="/home" component={Home}/>
-          <Route path="/hotel" component={Hotel}/>
           <Route path="/hotel/:city" component={Hotel}/>
-          <Route path="/hotelPage" component={HotelPage}/>
           <Route path="/hotelPage/:id" component={HotelPage}/>
           <Route path="*" component={Error404}/>
         </Switch>
