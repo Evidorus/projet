@@ -1,11 +1,8 @@
 import React from "react";
 import getHomeData from "../utils/Api";
-<<<<<<< HEAD
-import "../App.css"
-=======
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import "../App.css";
 import CityCard from "../components/CityCard";
->>>>>>> cityCard
+import { BrowserRouter } from "react-router-dom";
 
 class Home extends React.Component {
   constructor(props) {
@@ -40,6 +37,7 @@ class Home extends React.Component {
                   <CityCard
                     cityName={city.name}
                     cityImage={city.source}
+                    citySlug={city.slug}
                   ></CityCard>
                 );
               })}
