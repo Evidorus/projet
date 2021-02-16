@@ -13,6 +13,7 @@ body{
   font-size: 22px;
   
   }
+<<<<<<< HEAD
   
   .caption{
   
@@ -24,3 +25,10 @@ body{
   }
   
   
+=======
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+>>>>>>> cityCard
