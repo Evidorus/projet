@@ -21,15 +21,18 @@ class Home extends React.Component {
   }
 
   render() {
-    return (
-      <>
-        <h1>Découvrir le monde </h1>
-
-        {this.state.cities.map((city) => {
-          return <p>{city.name}</p>;
-        })}
-      </>
-    );
+    if (this.state.cities.length === 0) {
+      return <h2>Les villes sont en train de charger</h2>;
+    } else {
+      return (
+        <>
+          <h1>Découvrir le monde </h1>
+          {this.state.cities.map((city) => {
+            return <p>{city.name}</p>;
+          })}
+        </>
+      );
+    }
   }
 }
 
