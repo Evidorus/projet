@@ -13,7 +13,7 @@ class Home extends React.Component {
     getHomeData()
       .then((response) => response.json())
       .then((response) => {
-        /* console.log(response); */
+        console.log(response);
         this.setState({
           cities: response.cities,
         });
@@ -24,8 +24,9 @@ class Home extends React.Component {
     return (
       <>
         <h1>Découvrir le monde </h1>
+
         {this.state.cities.map((city) => {
-          return <p>{city}</p>;
+          return <p>{city.name}</p>;
         })}
       </>
     );
