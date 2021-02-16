@@ -1,8 +1,8 @@
 import React from "react";
 import getHomeData from "../utils/Api";
-import "../App.css"
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import "../App.css";
 import CityCard from "../components/CityCard";
+import { BrowserRouter } from "react-router-dom";
 
 class Home extends React.Component {
   constructor(props) {
