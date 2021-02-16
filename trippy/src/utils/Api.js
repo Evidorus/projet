@@ -6,4 +6,4 @@ const getHomeData = () =>{
     return fetch(config.host + "/api/home")
 }
 
-export default config
+export default getHomeData

@@ -1,4 +1,5 @@
 import React from "react";
+import getHomeData from "../utils/Api"
 
 class Home extends React.Component {
   constructor(props) {
@@ -6,10 +7,17 @@ class Home extends React.Component {
   this.state = { 
     cities: [] 
     };
-    componentWillUnmount() {
-      getHomeData()
+    
   }
-}
+
+  componentDidMount() {
+    getHomeData()
+    .then(response => response.json())
+    .then(response => {
+      console.log(response)
+    })
+  }
+
   render() {
     return (
       <>
