@@ -3,11 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
 class NavBar extends React.Component {
+ 
   render() {
+  
     return (
-      <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">
+      <div >
+        <nav class="navbar navbar-expand-lg  navbar-light bg-success">
+          <a class="navbar-brand text-white" href="#">
           Trippy
           </a>
           <button
@@ -22,19 +24,19 @@ class NavBar extends React.Component {
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <Link class="nav-link" to="/home">
+            <ul class="navbar-nav ">
+              <li class="nav-item active ">
+                <Link class="nav-link text-white " to="/home">
                 Home <span class="sr-only">(current)</span>
                 </Link>
               </li>
               <li class="nav-item">
-                <Link class="nav-link" to="/hotel">
+                <Link class="nav-link text-white" to="/hotel">
                 Hotel
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/hotelPage">
+              <li class="nav-item ">
+                <Link class="nav-link text-white" to="/hotelPage">
                 HotelPage
                 </Link>
               </li>

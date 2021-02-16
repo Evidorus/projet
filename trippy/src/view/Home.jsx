@@ -1,5 +1,6 @@
 import React from "react";
 import getHomeData from "../utils/Api";
+import "../App.css"
 
 class Home extends React.Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class Home extends React.Component {
 
   render() {
     if (this.state.cities.length === 0) {
-      return <h2>Les villes sont en train de charger</h2>;
+      return <h2 className="caption">Les villes sont en train de charger</h2>;
     } else {
       return (
         <>
