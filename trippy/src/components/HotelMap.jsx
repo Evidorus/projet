@@ -3,7 +3,7 @@ import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import HotelMarker from "./HotelMarker"
 import "leaflet/dist/leaflet.css";
 import maison from './maison.png'
-import L, { map } from 'leaflet';
+import L from 'leaflet';
 
 class HotelMap extends React.Component {
   constructor(props) {

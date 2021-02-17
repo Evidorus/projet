@@ -1,6 +1,7 @@
 import React from "react";
 import "./HotelCard.css";
 import Ratings from "react-ratings-declarative";
+import { Link } from "react-router-dom"
 
 class HotelCard extends React.Component {
   constructor(props) {
@@ -12,24 +13,20 @@ class HotelCard extends React.Component {
 
   componentDidMount() {}
 
-  //   changeRating(newRating) {
-  //     this.setState({
-  //       rating: newRating
-  //     });
-  //   }
-
   render() {
     return (
-      <div>
-        {this.props.hotel.pictures.slice(0, 1).map((img) => {
+      <Link to={`/hotelPage/${this.props.hotel._id}`} className="col-4">
+        {this.props.hotel.pictures
+        .slice(0,1)
+        .map((img) => {
           return (
             <img
               className="HotelCardImg"
               src={img}
-              onError={(e) => {
+                onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = this.state.image;
-              }}
+            }}
             />
           );
         })}
@@ -60,7 +57,7 @@ class HotelCard extends React.Component {
             <Ratings.Widget />
           </Ratings>
         )}
-      </div>
+      </Link>
     );
   }
 }
