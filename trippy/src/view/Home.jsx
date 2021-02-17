@@ -28,7 +28,7 @@ class Home extends React.Component {
       return <h2 className="caption">Les villes sont en train de charger</h2>;
     } else {
       return (
-        <>
+        <div>
           <div className="container">
             <h1>Découvrir le monde </h1>
             <div className="row ">
@@ -38,13 +38,12 @@ class Home extends React.Component {
                     cityName={city.name}
                     cityImage={city.source}
                     citySlug={city.slug}
-                    city={city}
                   ></CityCard>
                 );
               })}
             </div>
           </div>
-        </>
+        </div>
       );
     }
   }
