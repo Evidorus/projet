@@ -1,8 +1,8 @@
 import React from "react";
 import getHomeData from "../utils/Api";
 import "../App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import CityCard from "../components/CityCard";
-import { BrowserRouter } from "react-router-dom";
 
 class Home extends React.Component {
   constructor(props) {
@@ -28,7 +28,7 @@ class Home extends React.Component {
       return <h2 className="caption">Les villes sont en train de charger</h2>;
     } else {
       return (
-        <BrowserRouter>
+        <>
           <div className="container">
             <h1>Découvrir le monde </h1>
             <div className="row ">
@@ -38,12 +38,13 @@ class Home extends React.Component {
                     cityName={city.name}
                     cityImage={city.source}
                     citySlug={city.slug}
+                    city={city}
                   ></CityCard>
                 );
               })}
             </div>
           </div>
-        </BrowserRouter>
+        </>
       );
     }
   }

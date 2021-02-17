@@ -2,6 +2,7 @@ import React from "react";
 import HotelCard from "../components/HotelCard";
 import HotelMap from "../components/HotelMap";
 import "../App.css"
+import {BrowserRouter} from "react-router-dom"
 
 
 class Hotel extends React.Component {
@@ -39,7 +40,7 @@ class Hotel extends React.Component {
       return <h1>Chargement</h1>
     } else {
       return (
-        <>
+        <BrowserRouter>
           <div>
             <h1 className="caption">Voici la page Hotel </h1>
             {this.state.hotels
@@ -51,7 +52,7 @@ class Hotel extends React.Component {
             <h1>Map de l'hotel</h1>
             <HotelMap hotel={this.state.hotels} center={this.state.center}></HotelMap>
           </div>
-        </>
+        </BrowserRouter>
       );
     }
     
