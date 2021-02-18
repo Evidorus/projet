@@ -33,17 +33,6 @@ class Home extends React.Component {
         <>
           <h1 className="text-center">Découvrir le monde</h1>
           <div className="container">
-              {this.state.cities.map((city) => {
-                return (
-                  <div className="col-4">
-                  <CityCard
-                    cityName={city.name}
-                    cityImage={city.source}
-                    citySlug={city.slug}
-                  ></CityCard>
-                  </div>
-                );
-              })}
             <div className="row">
               <div className="col-lg-6 col-sm-12 paris">
                 {this.state.cities.length !== 0 && (
