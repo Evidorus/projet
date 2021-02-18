@@ -12,7 +12,7 @@ class CityCard extends React.Component {
       <>
         {this.props.cityName == "Paris" ? (
           <>
-            <Link to={`/hotels/${this.props.cityName}`}>
+            <Link to={`/hotel/${this.props.slug}`}>
               <img src={source} alt="" className="cityImg" />
               <p className="titreVille">{this.props.cityName}</p>
             </Link>
@@ -20,7 +20,7 @@ class CityCard extends React.Component {
         ) : (
           <>
             <div className="col-6 autresVilles">
-              <Link to={`/hotels/${this.props.cityName}`}>
+              <Link to={`/hotel/${this.props.city.slug}`}>
                 <img src={source} alt="..." className="cityImg2 " />
                 <p className="titreVille">{this.props.cityName}</p>
               </Link>

@@ -56,6 +56,7 @@ class Home extends React.Component {
                           <CityCard
                             cityName={city.name}
                             image={this.state.image + city.source}
+                            city={city}
                           />
                         );
                       })}
