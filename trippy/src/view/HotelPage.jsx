@@ -20,14 +20,14 @@ class HotelPage extends React.Component {
       .then((result) => {
         console.log(result);
         this.setState({
-          hotel: result,
+          hotel: result.result,
         });
       });
   };
 
   render() {
-    if (this.state.hotel.length === 0){
-      return <h2>Ca charge baka, soit patient !!</h2>
+    if (this.state.hotel.length === 0) {
+      return <h2>Ca charge baka, soit patient !!</h2>;
     } else {
       return (
         <>
@@ -35,7 +35,6 @@ class HotelPage extends React.Component {
         </>
       );
     }
-    
   }
 }
 
