@@ -14,7 +14,12 @@ class HotelPage extends React.Component {
     this.state = {
       hotel: [],
       id: props.match.params.id,
-      /* images: [], */
+      images: [
+        {
+          original: "https://picsum.photos/id/1018/1000/600/",
+          thumbnail: "https://picsum.photos/id/1018/1000/600/",
+        },
+      ],
     };
   }
 
@@ -29,7 +34,12 @@ class HotelPage extends React.Component {
         console.log(result);
         this.setState({
           hotel: result.result,
-          /* images: result.result.pictures, */
+          images: result.result.pictures.map((picture) => {
+            return {
+              original: picture,
+              thumbnail: picture,
+            };
+          }),
         });
       });
   };
@@ -100,7 +110,7 @@ class HotelPage extends React.Component {
             </Ratings>
           )}
           <h2 className="fw-bold">{this.state.hotel.price}€</h2>
-          <ImageGallery items={this.images} />
+          <ImageGallery items={this.state.images} />
           {this.state.hotel.commodities.map((commodity) => {
             if (commodity === "wifi") {
               return (
