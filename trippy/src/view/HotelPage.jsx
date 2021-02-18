@@ -105,7 +105,7 @@ class HotelPage extends React.Component {
             if (commodity === "wifi") {
               return (
                 <p className="m-2">
-                  <i class="fas fa-wifi"></i> {commodity}
+                  <i className="fas fa-wifi"></i> {commodity}
                 </p>
               );
             }
@@ -119,125 +119,125 @@ class HotelPage extends React.Component {
             if (commodity === "bar") {
               return (
                 <p className="m-2">
-                  <i class="fas fa-glass-martini-alt"></i> {commodity}
+                  <i className="fas fa-glass-martini-alt"></i> {commodity}
                 </p>
               );
             }
             if (commodity === "disabled access") {
               return (
                 <p className="m-2">
-                  <i class="fas fa-wheelchair"></i> {commodity}
+                  <i className="fas fa-wheelchair"></i> {commodity}
                 </p>
               );
             }
             if (commodity === "non smoking") {
               return (
                 <p className="m-2">
-                  <i class="fas fa-smoking-ban"></i> {commodity}
+                  <i className="fas fa-smoking-ban"></i> {commodity}
                 </p>
               );
             }
             if (commodity === "multilingual staff") {
               return (
                 <p className="m-2">
-                  <i class="fas fa-language"></i> {commodity}
+                  <i className="fas fa-language"></i> {commodity}
                 </p>
               );
             }
             if (commodity === "breakfast included") {
               return (
                 <p className="m-2">
-                  <i class="fas fa-coffee"></i> {commodity}
+                  <i className="fas fa-coffee"></i> {commodity}
                 </p>
               );
             }
             if (commodity === "air conditioning") {
               return (
                 <p className="m-2">
-                  <i class="fas fa-fan"></i> {commodity}
+                  <i className="fas fa-fan"></i> {commodity}
                 </p>
               );
             }
             if (commodity === "animals") {
               return (
                 <p className="m-2">
-                  <i class="fas fa-dog"></i> {commodity}
+                  <i className="fas fa-dog"></i> {commodity}
                 </p>
               );
             }
             if (commodity === "conciergerie") {
               return (
                 <p className="m-2">
-                  <i class="fas fa-house-user"></i> {commodity}
+                  <i className="fas fa-house-user"></i> {commodity}
                 </p>
               );
             }
             if (commodity === "family") {
               return (
                 <p className="m-2">
-                  <i class="fas fa-users"></i> {commodity}
+                  <i className="fas fa-users"></i> {commodity}
                 </p>
               );
             }
             if (commodity === "meeting rooms") {
               return (
                 <p className="m-2">
-                  <i class="fas fa-people-arrows"></i> {commodity}
+                  <i className="fas fa-people-arrows"></i> {commodity}
                 </p>
               );
             }
             if (commodity === "minibar") {
               return (
                 <p className="m-2">
-                  <i class="fas fa-glass-whiskey"></i> {commodity}
+                  <i className="fas fa-glass-whiskey"></i> {commodity}
                 </p>
               );
             }
             if (commodity === "gym") {
               return (
                 <p className="m-2">
-                  <i class="fas fa-dumbbell"></i> {commodity}
+                  <i className="fas fa-dumbbell"></i> {commodity}
                 </p>
               );
             }
             if (commodity === "suites") {
               return (
                 <p className="m-2">
-                  <i class="fab fa-fort-awesome-alt"></i> {commodity}
+                  <i className="fab fa-fort-awesome-alt"></i> {commodity}
                 </p>
               );
             }
             if (commodity === "room service") {
               return (
                 <p className="m-2">
-                  <i class="fas fa-hand-sparkles"></i> {commodity}
+                  <i className="fas fa-hand-sparkles"></i> {commodity}
                 </p>
               );
             }
             if (commodity === "swimming pool") {
               return (
                 <p className="m-2">
-                  <i class="fas fa-swimmer"></i> {commodity}
+                  <i className="fas fa-swimmer"></i> {commodity}
                 </p>
               );
             }
             if (commodity === "shuttle") {
               return (
                 <p className="m-2">
-                  <i class="fas fa-thumbs-up"></i> {commodity}
+                  <i className="fas fa-thumbs-up"></i> {commodity}
                 </p>
               );
             }
             if (commodity === "spa") {
               return (
                 <p className="m-2">
-                  <i class="fas fa-spa"></i> {commodity}
+                  <i className="fas fa-spa"></i> {commodity}
                 </p>
               );
             } else {
               return (
                 <p className="m-2">
-                  <i class="fas fa-tshirt"></i> {commodity}
+                  <i className="fas fa-tshirt"></i> {commodity}
                 </p>
               );
             }
