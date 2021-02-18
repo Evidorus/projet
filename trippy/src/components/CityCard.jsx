@@ -4,16 +4,30 @@ import { Link } from "react-router-dom";
 
 class CityCard extends React.Component {
   render() {
+    let source = "http://via.placeholder.com/300x200";
+    if (this.props.image !== "") {
+      source = this.props.image;
+    }
     return (
-      
-      <Link to={`/hotel/${this.props.citySlug}`}>
-        <img
-          className="col-12"
-          src={`http://localhost:3002${this.props.cityImage}`}
-          alt={this.props.cityName}
-        />
-        <h3 className="text-center">{this.props.cityName}</h3>
-      </Link>
+      <>
+        {this.props.cityName == "Paris" ? (
+          <>
+            <Link to={`/hotels/${this.props.cityName}`}>
+              <img src={source} alt="" className="cityImg" />
+              <p className="titreVille">{this.props.cityName}</p>
+            </Link>
+          </>
+        ) : (
+          <>
+            <div className="col-6 autresVilles">
+              <Link to={`/hotels/${this.props.cityName}`}>
+                <img src={source} alt="..." className="cityImg2 " />
+                <p className="titreVille">{this.props.cityName}</p>
+              </Link>
+            </div>
+          </>
+        )}
+      </>
     );
   }
 }
