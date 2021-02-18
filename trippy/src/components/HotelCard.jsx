@@ -16,7 +16,7 @@ class HotelCard extends React.Component {
   render() {
 
     return (
-      <div className="card ">
+      <div className="card">
 
         <Link to={`/hotelPage/${this.props.hotel._id}`} className="col-4">
           {this.props.hotel.pictures
@@ -36,27 +36,36 @@ class HotelCard extends React.Component {
 
               );
             })}
-
-            <p className="text-dark">{this.props.hotel.name}</p>
-            <p className="text-dark">{this.props.hotel.price} €</p>
-            <div className="rating-stars">
+            <div className="flex">
+            <p className="text-dark textwrapper">{this.props.hotel.name}</p>
+            <p className="text-dark pricewrapper">{this.props.hotel.price}€</p>
+            </div>
+            
+            {/* <div className="rating-stars"> */}
 
             {this.props.hotel.stars !== null ? (
               <Ratings
                 rating={this.props.hotel.stars}
                 widgetRatedColors="orange"
+                widgetEmptyColors="grey"
+                widgetSpacings="0"
               // changeRating={this.props.hotel.stars}
               >
-                <Ratings.Widget />
-                <Ratings.Widget />
-                <Ratings.Widget />
-                <Ratings.Widget />
-                <Ratings.Widget />
+                <Ratings.Widget 
+                widgetDimension="15px"/>
+                <Ratings.Widget 
+                widgetDimension="15px"/>
+                <Ratings.Widget 
+                widgetDimension="15px"/>
+                <Ratings.Widget 
+                widgetDimension="15px"/>
+                <Ratings.Widget 
+                widgetDimension="15px"/>
               </Ratings  >
             ) : (
                 <Ratings
                   rating={0}
-                  widgetRatedColors="orange"
+                  widgetRatedColors="green"
                 // changeRating={this.props.hotel.stars}
                 >
                   <Ratings.Widget />
@@ -66,7 +75,7 @@ class HotelCard extends React.Component {
                   <Ratings.Widget />
                 </Ratings>
               )}
-          </div>
+          {/* </div> */}
 
         </Link>
       </div>

@@ -40,19 +40,19 @@ class Hotel extends React.Component {
     } else {
       return (
         <>
-          <h2>Voici la page Hotel </h2>
+          <h2 className="text-center"> Voici la page Hotel </h2>
 
-          <div className="row ml-5">
+          <div className="row">
             {this.state.hotels
               .map((hotel) => {
                 return (
-                  <div className="col-lg-4 mb-4">
+                  <div className="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
                     <HotelCard hotel={hotel}></HotelCard>
                   </div>)
               })}
           </div>
           <div>
-            <h1>Map de l'hotel</h1>
+            <h1 className="text-center">Carte</h1>
             <HotelMap hotel={this.state.hotels} center={this.state.center}></HotelMap>
           </div>
         </>

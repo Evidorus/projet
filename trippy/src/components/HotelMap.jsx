@@ -23,9 +23,9 @@ class HotelMap extends React.Component {
     return (
       <div>
         <Map
-          style={{ height: 500, width: 500, objectFit: "cover" }}
+          style={{ height: 500, objectFit: "cover" }}
           center={[this.props.center.lat, this.props.center.lon]}
-          zoom={12}
+          zoom={13}
           scrollWheelZoom={false}
         >
           <TileLayer
