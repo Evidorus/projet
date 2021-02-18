@@ -2,6 +2,7 @@ import React from "react";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import maison from "../components/maison.png";
+import Ratings from "react-ratings-declarative";
 
 import "../App.css";
 
@@ -29,6 +30,34 @@ class HotelPage extends React.Component {
       });
   };
 
+  getStars = () => {
+    this.state.hotel.stars !== null ? (
+      <Ratings
+        rating={this.state.hotel.stars}
+        widgetRatedColors="orange"
+        // changeRating={this.props.hotel.stars}
+      >
+        <Ratings.Widget />
+        <Ratings.Widget />
+        <Ratings.Widget />
+        <Ratings.Widget />
+        <Ratings.Widget />
+      </Ratings>
+    ) : (
+      <Ratings
+        rating={0}
+        widgetRatedColors="orange"
+        // changeRating={this.props.hotel.stars}
+      >
+        <Ratings.Widget />
+        <Ratings.Widget />
+        <Ratings.Widget />
+        <Ratings.Widget />
+        <Ratings.Widget />
+      </Ratings>
+    );
+  };
+
   render() {
     var greenIcon = L.icon({
       iconUrl: maison,
@@ -45,6 +74,31 @@ class HotelPage extends React.Component {
       return (
         <div className="container">
           <h1 className="mt-3">{this.state.hotel.name}</h1>
+          {this.state.hotel.stars !== null ? (
+            <Ratings
+              rating={this.state.hotel.stars}
+              widgetRatedColors="orange"
+              // changeRating={this.props.hotel.stars}
+            >
+              <Ratings.Widget />
+              <Ratings.Widget />
+              <Ratings.Widget />
+              <Ratings.Widget />
+              <Ratings.Widget />
+            </Ratings>
+          ) : (
+            <Ratings
+              rating={0}
+              widgetRatedColors="orange"
+              // changeRating={this.props.hotel.stars}
+            >
+              <Ratings.Widget />
+              <Ratings.Widget />
+              <Ratings.Widget />
+              <Ratings.Widget />
+              <Ratings.Widget />
+            </Ratings>
+          )}
           <h2>{this.state.hotel.price}€</h2>
           <Map
             style={{ height: 500, width: 500, objectFit: "cover" }}
