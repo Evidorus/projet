@@ -4,6 +4,7 @@ import L from "leaflet";
 import maison from "../components/maison.png";
 import Ratings from "react-ratings-declarative";
 import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 
 import "../App.css";
 
@@ -13,6 +14,7 @@ class HotelPage extends React.Component {
     this.state = {
       hotel: [],
       id: props.match.params.id,
+      /* images: [], */
     };
   }
 
@@ -27,9 +29,34 @@ class HotelPage extends React.Component {
         console.log(result);
         this.setState({
           hotel: result.result,
+          /* images: result.result.pictures, */
         });
       });
   };
+
+  images = [
+    {
+      original: "https://picsum.photos/id/1018/1000/600/",
+      thumbnail: "https://picsum.photos/id/1018/250/150/",
+    },
+    {
+      original: "https://picsum.photos/id/1015/1000/600/",
+      thumbnail: "https://picsum.photos/id/1015/250/150/",
+    },
+    {
+      original: "https://picsum.photos/id/1019/1000/600/",
+      thumbnail: "https://picsum.photos/id/1019/250/150/",
+    },
+  ];
+  /* getStaticImages = () => {
+    let images = [];
+    this.state.hotel.pictures.map((picture) => {
+      return images.push({
+        original: { picture },
+        thumbnail: { picture },
+      });
+    });
+  }; */
 
   render() {
     var greenIcon = L.icon({
@@ -73,13 +100,10 @@ class HotelPage extends React.Component {
             </Ratings>
           )}
           <h2 className="fw-bold">{this.state.hotel.price}€</h2>
-
-          <div className="row">
-            {this.state.hotel.commodities.map((commodity) => {
-              return <span className="m-2">{commodity}</span>;
-            })}
-          </div>
-
+          {this.state.hotel.commodities.map((commodity) => {
+            return <p className="m-2">{commodity}</p>;
+          })}
+          <ImageGallery items={this.images} />;
           <Map
             style={{ height: 500, width: 500, objectFit: "cover" }}
             center={[
