@@ -31,14 +31,16 @@ class Home extends React.Component {
         <div>
           <div className="container">
             <h1>Découvrir le monde </h1>
-            <div className="row ">
+            <div className="row justify-content-start ">
               {this.state.cities.map((city) => {
                 return (
+                  <div className="col-4">
                   <CityCard
                     cityName={city.name}
                     cityImage={city.source}
                     citySlug={city.slug}
                   ></CityCard>
+                  </div>
                 );
               })}
             </div>

@@ -8,12 +8,13 @@ class NavBar extends React.Component {
   
     return (
       <div >
-        <nav class="navbar navbar-expand-lg  navbar-light bg-success">
-          <a class="navbar-brand text-white" href="#">
+        <nav className="navbar navbar-expand-lg  navbar-dark bg-success">
+          <a className="navbar-brand font-weight-bold" href="#">
+          <i className="fas fa-umbrella-beach "></i>
           Trippy
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarNav"
@@ -21,25 +22,31 @@ class NavBar extends React.Component {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
+          <div className="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ">
-              <li class="nav-item active ">
-                <Link class="nav-link text-white " to="/home">
-                Home <span class="sr-only">(current)</span>
+              <li className="nav-item active font-weight-bold ">
+                <Link className="nav-link" to="/home">
+                Hotels <span className="sr-only">(current)</span>
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link text-white" to="/hotel">
-                Hotel
+              <li className="nav-item">
+                <Link className="nav-link" to="#">
+                Restaurants
                 </Link>
               </li>
-              <li class="nav-item ">
-                <Link class="nav-link text-white" to="/hotelPage">
-                HotelPage
+              <li className="nav-item ">
+                <Link className="nav-link" to="#">
+                Login
                 </Link>
               </li>
+              <li className="nav-item ">
+                <Link className="nav-link" to="#">
+                Signup
+                </Link>
+              </li>
+              
             </ul>
           </div>
         </nav>

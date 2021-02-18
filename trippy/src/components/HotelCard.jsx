@@ -20,6 +20,7 @@ class HotelCard extends React.Component {
         .slice(0,1)
         .map((img) => {
           return (
+            
             <img
               className="HotelCardImg"
               src={img}
@@ -62,3 +63,5 @@ class HotelCard extends React.Component {
   }
 }
 export default HotelCard;
+
+  
