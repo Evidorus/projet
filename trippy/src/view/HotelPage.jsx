@@ -44,7 +44,7 @@ class HotelPage extends React.Component {
       });
   };
 
-  images = [
+  /* images = [
     {
       original: "https://picsum.photos/id/1018/1000/600/",
       thumbnail: "https://picsum.photos/id/1018/250/150/",
@@ -57,7 +57,7 @@ class HotelPage extends React.Component {
       original: "https://picsum.photos/id/1019/1000/600/",
       thumbnail: "https://picsum.photos/id/1019/250/150/",
     },
-  ];
+  ]; */
   /* getStaticImages = () => {
     let images = [];
     this.state.hotel.pictures.map((picture) => {
