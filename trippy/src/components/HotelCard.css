@@ -1,5 +1,21 @@
+
+body{
+    color: black;
+}
 .HotelCardImg{
-    height: 100px;
-    width: 100px;
+    width: 300px;
     object-fit: cover;
 }
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height: 350px ;
+    width: 350px;
+    background-color:Silver;
+  }
+  .rating-stars {
+    position: relative;
+    display: block;
+    text-align: center;
+  }

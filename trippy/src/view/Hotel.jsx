@@ -35,17 +35,21 @@ class Hotel extends React.Component {
   };
 
   render() {
-    if (this.state.hotels.length === 0){
-      return <h1>Chargement</h1>
+    if (this.state.hotels.length === 0) {
+      return <h1 className= "mb-5">Chargement</h1>
     } else {
       return (
         <>
-          <div>
-            <h1 className="caption">Voici la page Hotel </h1>
+          <h2>Voici la page Hotel </h2>
+
+          <div className="row ml-5">
             {this.state.hotels
-            .map((hotel) => {
-              return <HotelCard hotel={hotel}></HotelCard>
-            })}
+              .map((hotel) => {
+                return (
+                  <div className="col-lg-4 mb-4">
+                    <HotelCard hotel={hotel}></HotelCard>
+                  </div>)
+              })}
           </div>
           <div>
             <h1>Map de l'hotel</h1>
@@ -54,7 +58,7 @@ class Hotel extends React.Component {
         </>
       );
     }
-    
+
   }
 }
 
