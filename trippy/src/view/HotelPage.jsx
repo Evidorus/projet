@@ -3,6 +3,7 @@ import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import maison from "../components/maison.png";
 import Ratings from "react-ratings-declarative";
+import ImageGallery from "react-image-gallery";
 
 import "../App.css";
 
@@ -28,34 +29,6 @@ class HotelPage extends React.Component {
           hotel: result.result,
         });
       });
-  };
-
-  getStars = () => {
-    this.state.hotel.stars !== null ? (
-      <Ratings
-        rating={this.state.hotel.stars}
-        widgetRatedColors="orange"
-        // changeRating={this.props.hotel.stars}
-      >
-        <Ratings.Widget />
-        <Ratings.Widget />
-        <Ratings.Widget />
-        <Ratings.Widget />
-        <Ratings.Widget />
-      </Ratings>
-    ) : (
-      <Ratings
-        rating={0}
-        widgetRatedColors="orange"
-        // changeRating={this.props.hotel.stars}
-      >
-        <Ratings.Widget />
-        <Ratings.Widget />
-        <Ratings.Widget />
-        <Ratings.Widget />
-        <Ratings.Widget />
-      </Ratings>
-    );
   };
 
   render() {
@@ -99,7 +72,14 @@ class HotelPage extends React.Component {
               <Ratings.Widget />
             </Ratings>
           )}
-          <h2>{this.state.hotel.price}€</h2>
+          <h2 className="fw-bold">{this.state.hotel.price}€</h2>
+
+          <div className="row">
+            {this.state.hotel.commodities.map((commodity) => {
+              return <span className="m-2">{commodity}</span>;
+            })}
+          </div>
+
           <Map
             style={{ height: 500, width: 500, objectFit: "cover" }}
             center={[
@@ -115,7 +95,10 @@ class HotelPage extends React.Component {
             />
             <Marker icon={greenIcon} position={this.state.hotel.location}>
               <Popup>
-                <div>{this.state.hotel.price}€</div>
+                <div>
+                  <p>{this.state.hotel.price}€</p>
+                  <p>{this.state.hotel.address}</p>
+                </div>
               </Popup>
             </Marker>
           </Map>
